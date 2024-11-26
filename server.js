@@ -18,7 +18,7 @@ const initializeDBAndServer=async()=>{
         });
 
         app.listen(3001,()=>{
-            console.log("Server Running at http://localhost:3000/")
+            console.log("Server Running at http://localhost:3001/")
         })
 
     }catch(e){
@@ -97,7 +97,6 @@ response.send("note Updated Successfully")
 
 app.delete("/notes/:noteId/",async(request,response)=>{
     const{noteId}=request.params
-
     const deleteNoteQuery=`
     DELETE FROM 
         notes 
